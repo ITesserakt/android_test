@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black">
@@ -16,9 +17,9 @@
             app:layout_scrollFlags="scroll|snap|enterAlwaysCollapsed">
 
             <ImageView
-                android:id="@+id/imageView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:contentDescription="@string/game_banner_description"
                 android:scaleType="centerCrop"
                 app:layout_collapseMode="parallax"
                 app:srcCompat="@drawable/img_background" />
@@ -39,7 +40,8 @@
                     <ImageButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@color/white_28"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="@string/back_button_description"
                         android:src="?attr/homeAsUpIndicator" />
                 </androidx.cardview.widget.CardView>
 
@@ -58,10 +60,10 @@
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@color/white_28"
+                        android:background="@android:color/transparent"
                         android:fontFamily="@font/sk_modernist_bold"
                         android:letterSpacing="0.1"
-                        android:text="···"
+                        android:text="@string/menu_cheat_text"
                         android:textColor="@color/lighter_text"
                         android:textSize="20sp" />
                 </androidx.cardview.widget.CardView>
@@ -85,8 +87,8 @@
                 android:id="@+id/bottom_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="@color/background"
                 android:layout_marginTop="20dp"
+                app:cardBackgroundColor="@color/background"
                 app:cardCornerRadius="16dp">
 
                 <LinearLayout
@@ -114,12 +116,11 @@
                             android:orientation="vertical">
 
                             <TextView
-                                android:id="@+id/textView5"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/sk_modernist_bold"
                                 android:letterSpacing="0.05"
-                                android:text="DoTA 2"
+                                android:text="@string/game_name"
                                 android:textColor="@color/white"
                                 android:textSize="20sp" />
 
@@ -135,16 +136,15 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:maxHeight="12dp"
-                                    android:rating="4.9" />
+                                    android:rating="@fraction/rating" />
 
                                 <TextView
                                     android:id="@+id/textView6"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="12dp"
-                                    android:layout_weight="1"
                                     android:fontFamily="@font/sk_modernist_regular"
-                                    android:text="70M"
+                                    android:text="@string/reviews_amount_text"
                                     android:textColor="@color/gray"
                                     android:textSize="12sp" />
                             </LinearLayout>
@@ -158,14 +158,14 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="11dp"
-                        app:chipSpacingHorizontal="10dp">
+                        app:chipSpacingHorizontal="10dp"
+                        tools:ignore="SmallSp">
 
                         <com.google.android.material.chip.Chip
-                            android:id="@+id/chip6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/montserrat"
-                            android:text="MOBA"
+                            android:text="@string/tag_1_text"
                             android:textColor="@color/tag_text"
                             android:textSize="10sp"
                             app:chipBackgroundColor="@color/tag_back"
@@ -179,11 +179,10 @@
                             app:textStartPadding="10dp" />
 
                         <com.google.android.material.chip.Chip
-                            android:id="@+id/chip5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/montserrat"
-                            android:text="MULTIPLAYER"
+                            android:text="@string/tag_2_text"
                             android:textColor="@color/tag_text"
                             android:textSize="10sp"
                             app:chipBackgroundColor="@color/tag_back"
@@ -197,12 +196,11 @@
                             app:textStartPadding="10dp" />
 
                         <com.google.android.material.chip.Chip
-                            android:id="@+id/chip4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@color/tag_back"
                             android:fontFamily="@font/montserrat"
-                            android:text="STRATEGY"
+                            android:text="@string/tag_3_text"
                             android:textColor="@color/tag_text"
                             android:textSize="10sp"
                             app:checkedIconVisible="false"
@@ -218,13 +216,12 @@
                     </com.google.android.material.chip.ChipGroup>
 
                     <TextView
-                        android:id="@+id/textView4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="16dp"
                         android:alpha="0.7"
                         android:fontFamily="@font/sk_modernist_regular"
-                        android:text="Dota 2 is a multiplayer online battle arena (MOBA) game which has two teams of five players compete to collectively destroy a large structure defended by the opposing team known as the &quot;Ancient&quot;, whilst defending their own."
+                        android:text="@string/game_description_text"
                         android:textColor="@color/lighter_text_70"
                         android:textSize="12sp"
                         app:lineHeight="19dp" />
@@ -235,12 +232,11 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/textView3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="12dp"
                             android:fontFamily="@font/sk_modernist_regular"
-                            android:text="@string/reviews_text"
+                            android:text="@string/reviews_caption"
                             android:textColor="@color/lighter_text"
                             android:textSize="16sp"
                             app:lineHeight="19.2dp" />
@@ -251,12 +247,10 @@
                             android:orientation="horizontal">
 
                             <TextView
-                                android:id="@+id/textView2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="0"
                                 android:fontFamily="@font/sk_modernist_regular"
-                                android:text="4.9"
+                                android:text="@fraction/rating"
                                 android:textColor="@color/white"
                                 android:textSize="48sp" />
 
@@ -276,11 +270,10 @@
                                     android:rating="4.9" />
 
                                 <TextView
-                                    android:id="@+id/textView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/sk_modernist_regular"
-                                    android:text="70M reviews"
+                                    android:text="@string/reviews_text"
                                     android:textColor="@color/light_text"
                                     android:textSize="12sp" />
                             </LinearLayout>
@@ -309,15 +302,14 @@
                             android:orientation="horizontal">
 
                             <androidx.cardview.widget.CardView
-                                android:id="@+id/avatar1"
                                 android:layout_width="36dp"
                                 android:layout_height="36dp"
                                 app:cardCornerRadius="18dp">
 
                                 <ImageView
-                                    android:id="@+id/avatarImage1"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
+                                    android:contentDescription="@string/avatar_description"
                                     android:scaleType="centerCrop"
                                     app:srcCompat="@drawable/user_1" />
 
@@ -329,40 +321,30 @@
                                 android:layout_marginStart="16dp"
                                 android:orientation="vertical">
 
-                                <LinearLayout
-                                    android:id="@+id/userBlock1"
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/sk_modernist_regular"
+                                    android:text="@string/user_1_name"
+                                    android:textColor="@color/light_text"
+                                    android:textSize="16sp" />
+
+                                <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:orientation="vertical">
-
-                                    <TextView
-                                        android:id="@+id/username1"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:fontFamily="@font/sk_modernist_regular"
-                                        android:text="Auguste Conte"
-                                        android:textColor="@color/light_text"
-                                        android:textSize="16sp" />
-
-                                    <TextView
-                                        android:id="@+id/commentDate1"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:fontFamily="@font/sk_modernist_regular"
-                                        android:text="February 14, 2019"
-                                        android:textColor="@color/white_40"
-                                        android:textSize="12sp" />
-                                </LinearLayout>
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/sk_modernist_regular"
+                                    android:text="@string/user_comment_date"
+                                    android:textColor="@color/white_40"
+                                    android:textSize="12sp" />
                             </LinearLayout>
 
                         </LinearLayout>
 
                         <TextView
-                            android:id="@+id/comment1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/sk_modernist_regular"
-                            android:text="“Once you start to learn its secrets, there’s a wild and exciting variety of play here that’s unmatched, even by its peers.”"
+                            android:text="@string/user_comment_text"
                             android:textAlignment="viewStart"
                             android:textColor="@color/light_text"
                             android:textSize="12sp"
@@ -371,7 +353,6 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/linearLayout2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginTop="12dp"
@@ -390,9 +371,9 @@
                                 app:cardCornerRadius="18dp">
 
                                 <ImageView
-                                    android:id="@+id/avatarImage2"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
+                                    android:contentDescription="@string/avatar_description"
                                     android:scaleType="centerCrop"
                                     app:srcCompat="@drawable/user_2" />
 
@@ -404,40 +385,30 @@
                                 android:layout_marginStart="16dp"
                                 android:orientation="vertical">
 
-                                <LinearLayout
-                                    android:id="@+id/userBlock2"
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/sk_modernist_regular"
+                                    android:text="@string/user_2_name"
+                                    android:textColor="@color/light_text"
+                                    android:textSize="16sp" />
+
+                                <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:orientation="vertical">
-
-                                    <TextView
-                                        android:id="@+id/username2"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:fontFamily="@font/sk_modernist_regular"
-                                        android:text="Jang Marcelino"
-                                        android:textColor="@color/light_text"
-                                        android:textSize="16sp" />
-
-                                    <TextView
-                                        android:id="@+id/commentDate2"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:fontFamily="@font/sk_modernist_regular"
-                                        android:text="February 14, 2019"
-                                        android:textColor="@color/white_40"
-                                        android:textSize="12sp" />
-                                </LinearLayout>
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/sk_modernist_regular"
+                                    android:text="@string/user_comment_date"
+                                    android:textColor="@color/white_40"
+                                    android:textSize="12sp" />
                             </LinearLayout>
 
                         </LinearLayout>
 
                         <TextView
-                            android:id="@+id/comment2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/sk_modernist_regular"
-                            android:text="“Once you start to learn its secrets, there’s a wild and exciting variety of play here that’s unmatched, even by its peers.”"
+                            android:text="@string/user_comment_text"
                             android:textAlignment="viewStart"
                             android:textColor="@color/light_text"
                             android:textSize="12sp"
@@ -446,7 +417,6 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/linearLayout3"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginTop="12dp"
@@ -459,15 +429,14 @@
                             android:orientation="horizontal">
 
                             <androidx.cardview.widget.CardView
-                                android:id="@+id/avatar3"
                                 android:layout_width="36dp"
                                 android:layout_height="36dp"
                                 app:cardCornerRadius="18dp">
 
                                 <ImageView
-                                    android:id="@+id/avatarImage3"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
+                                    android:contentDescription="@string/avatar_description"
                                     android:scaleType="centerCrop"
                                     app:srcCompat="@drawable/user_2" />
 
@@ -479,40 +448,30 @@
                                 android:layout_marginStart="16dp"
                                 android:orientation="vertical">
 
-                                <LinearLayout
-                                    android:id="@+id/userBlock3"
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/sk_modernist_regular"
+                                    android:text="@string/user_3_name"
+                                    android:textColor="@color/light_text"
+                                    android:textSize="16sp" />
+
+                                <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:orientation="vertical">
-
-                                    <TextView
-                                        android:id="@+id/username3"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:fontFamily="@font/sk_modernist_regular"
-                                        android:text="Jang Marcelino"
-                                        android:textColor="@color/light_text"
-                                        android:textSize="16sp" />
-
-                                    <TextView
-                                        android:id="@+id/commentDate3"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:fontFamily="@font/sk_modernist_regular"
-                                        android:text="February 14, 2019"
-                                        android:textColor="@color/white_40"
-                                        android:textSize="12sp" />
-                                </LinearLayout>
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/sk_modernist_regular"
+                                    android:text="@string/user_comment_date"
+                                    android:textColor="@color/white_40"
+                                    android:textSize="12sp" />
                             </LinearLayout>
 
                         </LinearLayout>
 
                         <TextView
-                            android:id="@+id/comment3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/sk_modernist_regular"
-                            android:text="“Once you start to learn its secrets, there’s a wild and exciting variety of play here that’s unmatched, even by its peers.”"
+                            android:text="@string/user_comment_text"
                             android:textAlignment="viewStart"
                             android:textColor="@color/light_text"
                             android:textSize="12sp"
@@ -521,14 +480,13 @@
                     </LinearLayout>
 
                     <Button
-                        android:id="@+id/button2"
                         android:layout_width="match_parent"
                         android:layout_height="64dp"
                         android:layout_marginTop="24dp"
                         android:layout_marginBottom="36dp"
                         android:fontFamily="@font/sk_modernist_bold"
                         android:letterSpacing="0.06"
-                        android:text="@string/install"
+                        android:text="@string/install_button_text"
                         android:textAllCaps="false"
                         android:textColor="@color/background"
                         android:textSize="16sp"
@@ -545,9 +503,9 @@
                 app:cardBackgroundColor="@android:color/transparent">
 
                 <ImageView
-                    android:id="@+id/imageView2"
                     android:layout_width="88dp"
                     android:layout_height="88dp"
+                    android:contentDescription="@string/game_logo_description"
                     android:scaleType="centerCrop"
                     app:srcCompat="@drawable/logo" />
 

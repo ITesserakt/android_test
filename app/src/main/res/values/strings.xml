@@ -1,5 +1,22 @@
 <resources>
     <string name="app_name">Sirius</string>
-    <string name="reviews_text">Reviews &amp; ratings</string>
-    <string name="install">Install</string>
+    <string name="reviews_caption">Reviews &amp; ratings</string>
+    <string name="install_button_text">Install</string>
+    <string name="game_name">DoTA 2</string>
+    <string name="reviews_amount_text">70M</string>
+    <string name="reviews_text">70M reviews</string>
+    <string name="game_banner_description">DoTA 2 game banner</string>
+    <string name="back_button_description">Go back</string>
+    <string name="menu_cheat_text" translatable="false">···</string>
+    <string name="tag_1_text">MOBA</string>
+    <string name="tag_2_text">MULTIPLAYER</string>
+    <string name="tag_3_text">STRATEGY</string>
+    <string name="game_description_text">Dota 2 is a multiplayer online battle arena (MOBA) game which has two teams of five players compete to collectively destroy a large structure defended by the opposing team known as the &quot;Ancient&quot;, whilst defending their own.</string>
+    <string name="avatar_description">User avatar</string>
+    <string name="user_1_name">Auguste Conte</string>
+    <string name="user_2_name">Jang Marcelino</string>
+    <string name="user_3_name">Auguste Marcelino</string>
+    <string name="user_comment_date">February 14, 2019</string>
+    <string name="user_comment_text">“Once you start to learn its secrets, there’s a wild and exciting variety of play here that’s unmatched, even by its peers.”</string>
+    <string name="game_logo_description">DoTA 2 game logo</string>
 </resources>
