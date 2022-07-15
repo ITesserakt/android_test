@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Sirius</string>
+    <string name="reviews_text">Reviews &amp; ratings</string>
+    <string name="install">Install</string>
 </resources>
